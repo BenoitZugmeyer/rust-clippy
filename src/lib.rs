@@ -76,6 +76,7 @@ pub mod identity_op;
 pub mod if_not_else;
 pub mod items_after_statements;
 pub mod len_zero;
+pub mod let_if_seq;
 pub mod lifetimes;
 pub mod loops;
 pub mod map_clone;
@@ -232,6 +233,7 @@ pub fn plugin_registrar(reg: &mut Registry) {
     reg.register_late_lint_pass(box blacklisted_name::BlackListedName::new(conf.blacklisted_names));
     reg.register_late_lint_pass(box functions::Functions::new(conf.too_many_arguments_threshold));
     reg.register_early_lint_pass(box doc::Doc);
+    reg.register_late_lint_pass(box let_if_seq::LetIfSeq);
 
     reg.register_lint_group("clippy_pedantic", vec![
         array_indexing::INDEXING_SLICING,
@@ -293,6 +295,7 @@ pub fn plugin_registrar(reg: &mut Registry) {
         items_after_statements::ITEMS_AFTER_STATEMENTS,
         len_zero::LEN_WITHOUT_IS_EMPTY,
         len_zero::LEN_ZERO,
+        let_if_seq::USELESS_LET_IF_SEQ,
         lifetimes::NEEDLESS_LIFETIMES,
         lifetimes::UNUSED_LIFETIMES,
         loops::EMPTY_LOOP,

@@ -14,7 +14,7 @@ Table of contents:
 * [License](#license)
 
 ##Lints
-There are 139 lints included in this crate:
+There are 140 lints included in this crate:
 
 name                                                                                                                 | default | meaning
 ---------------------------------------------------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -149,6 +149,7 @@ name                                                                            
 [use_debug](https://github.com/Manishearth/rust-clippy/wiki#use_debug)                                               | allow   | use `Debug`-based formatting
 [used_underscore_binding](https://github.com/Manishearth/rust-clippy/wiki#used_underscore_binding)                   | warn    | using a binding which is prefixed with an underscore
 [useless_format](https://github.com/Manishearth/rust-clippy/wiki#useless_format)                                     | warn    | useless use of `format!`
+[useless_let_if_seq](https://github.com/Manishearth/rust-clippy/wiki#useless_let_if_seq)                             | warn    | TODO
 [useless_transmute](https://github.com/Manishearth/rust-clippy/wiki#useless_transmute)                               | warn    | transmutes that have the same to and from types
 [useless_vec](https://github.com/Manishearth/rust-clippy/wiki#useless_vec)                                           | warn    | useless `vec!`
 [while_let_loop](https://github.com/Manishearth/rust-clippy/wiki#while_let_loop)                                     | warn    | `loop { if let { ... } else break }` can be written as a `while let` loop
